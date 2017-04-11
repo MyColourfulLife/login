@@ -7,6 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <WXApi.h>
+#import "LoginViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +25,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //注册shareSDK第三方平台登录
+    NSString *shareSDKAppkey = @"1026805b2beb4";
+    [ShareSDK registerApp:shareSDKAppkey activePlatforms:@[@(SSDKPlatformTypeQQ),@(SSDKPlatformTypeWechat)] onImport:^(SSDKPlatformType platformType) {
+        switch (platformType) {
+            case SSDKPlatformTypeQQ:
+                [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                break;
+                case SSDKPlatformTypeWechat:
+                [ShareSDKConnector connectWeChat:[WXApi class]];
+                break;
+            default:
+                break;
+        }
+    } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+         NSString*  QQAppID             ;
+        NSString*  QQAppKey            ;
+        NSString*  WeChatID            ;
+        NSString*  WeChatAppSecret      ;
+        //以上参数 在实际使用时需要赋值
+        switch (platformType) {
+            case SSDKPlatformTypeQQ:
+                [appInfo SSDKSetupQQByAppId:QQAppID appKey:QQAppKey authType:SSDKAuthTypeBoth];
+                break;
+                case SSDKPlatformTypeWechat:
+                [appInfo SSDKSetupWeChatByAppId:WeChatID appSecret:WeChatAppSecret];
+                break;
+            default:
+                break;
+        }
+    }];
+    
     
     //梳理用户登录流程
     //0.创建主窗口并使其可见
@@ -32,7 +71,8 @@
         //打开socket
     }else{
         //未登录 切换到登录注册界面
-//        self.window.rootViewController =
+        UIStoryboard *storyBorad = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        self.window.rootViewController = [storyBorad instantiateViewControllerWithIdentifier:@"LoginViewController"];
         //关闭socket
     }
     
@@ -54,6 +94,7 @@
 -(void)login{
     //这里可以做些额外的操作
     //切换到登录后界面
+    self.window.rootViewController = [[ViewController alloc]init];
     //重新打开socket
 }
 

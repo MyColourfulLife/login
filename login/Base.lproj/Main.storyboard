@@ -29,7 +29,7 @@
         <!--Login View Controller-->
         <scene sceneID="eGm-xH-0rM">
             <objects>
-                <viewController id="N8k-lz-VNl" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N8k-lz-VNl" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KEw-cD-v6e"/>
                         <viewControllerLayoutGuide type="bottom" id="dG3-nY-wMw"/>

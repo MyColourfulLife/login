@@ -10,4 +10,5 @@ pod 'ShareSDK3',:git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
 pod 'MOBFoundation'
 pod 'ShareSDK3/ShareSDKPlatforms/QQ',:git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
 pod 'ShareSDK3/ShareSDKPlatforms/WeChat',:git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
+pod 'ShareSDK3/ShareSDKExtension',:git => 'https://git.oschina.net/MobClub/ShareSDK-for-iOS.git'
 end

@@ -392,6 +392,7 @@
 				1121F8331E9C712500DB2EF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

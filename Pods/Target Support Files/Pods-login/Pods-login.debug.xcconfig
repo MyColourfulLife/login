@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/MOBFoundation" "${PODS_ROOT}/ShareSDK3/ShareSDK" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/Required" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/PlatformSDK/QQSDK" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/PlatformConnector" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/Optional"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/MOBFoundation" "${PODS_ROOT}/ShareSDK3/ShareSDK" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/Required" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/Optional" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/PlatformSDK/QQSDK" "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/PlatformConnector"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MOBFoundation" "${PODS_ROOT}/Headers/Public/ShareSDK3"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/ShareSDK3/ShareSDK/Support/PlatformSDK/WeChatSDK"
