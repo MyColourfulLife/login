@@ -1,0 +1,34 @@
+PODS:
+  - MOBFoundation (2.2.15)
+  - ShareSDK3 (3.6.2.1):
+    - MOBFoundation
+    - ShareSDK3/ShareSDK (= 3.6.2.1)
+  - ShareSDK3/ShareSDK (3.6.2.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/QQ (3.6.2.1):
+    - MOBFoundation
+  - ShareSDK3/ShareSDKPlatforms/WeChat (3.6.2.1):
+    - MOBFoundation
+
+DEPENDENCIES:
+  - MOBFoundation
+  - ShareSDK3 (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
+  - ShareSDK3/ShareSDKPlatforms/QQ (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
+  - ShareSDK3/ShareSDKPlatforms/WeChat (from `https://git.oschina.net/MobClub/ShareSDK-for-iOS.git`)
+
+EXTERNAL SOURCES:
+  ShareSDK3:
+    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
+
+CHECKOUT OPTIONS:
+  ShareSDK3:
+    :commit: 5d78573d9dd45f2eb6116a6413bd50a59697879a
+    :git: https://git.oschina.net/MobClub/ShareSDK-for-iOS.git
+
+SPEC CHECKSUMS:
+  MOBFoundation: 4975874f74c991f562151f6a4549e9a6ad743fd8
+  ShareSDK3: 3c531b5e64576e4b947127b9b1f46b685dfa3b37
+
+PODFILE CHECKSUM: 79705aa4aab62e404ed13e40f2ca0a5e3fbe67e4
+
+COCOAPODS: 1.0.1

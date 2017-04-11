@@ -14,6 +14,7 @@
 		1121F82A1E9C712500DB2EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1121F8291E9C712500DB2EF0 /* Assets.xcassets */; };
 		1121F82D1E9C712500DB2EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1121F82B1E9C712500DB2EF0 /* LaunchScreen.storyboard */; };
 		1121F8361E9C773B00DB2EF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1121F8351E9C773B00DB2EF0 /* LoginViewController.m */; };
+		58A11980719FA00B202ABFDC /* libPods-login.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFCA25E35206AE630E7FF42 /* libPods-login.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,9 @@
 		1121F82E1E9C712500DB2EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1121F8341E9C773B00DB2EF0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		1121F8351E9C773B00DB2EF0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		16464D7679C6D915F569148F /* Pods-login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-login/Pods-login.debug.xcconfig"; sourceTree = "<group>"; };
+		8E89A19A9C2FCB327DECBEC1 /* Pods-login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login.release.xcconfig"; path = "Pods/Target Support Files/Pods-login/Pods-login.release.xcconfig"; sourceTree = "<group>"; };
+		CCFCA25E35206AE630E7FF42 /* libPods-login.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-login.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58A11980719FA00B202ABFDC /* libPods-login.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				1121F81C1E9C712500DB2EF0 /* login */,
 				1121F81B1E9C712500DB2EF0 /* Products */,
+				B9AA12D8A3E61F566D4E3C0E /* Pods */,
+				E782D1FAA9A014AA6222AE0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +91,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B9AA12D8A3E61F566D4E3C0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16464D7679C6D915F569148F /* Pods-login.debug.xcconfig */,
+				8E89A19A9C2FCB327DECBEC1 /* Pods-login.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E782D1FAA9A014AA6222AE0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCFCA25E35206AE630E7FF42 /* libPods-login.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1121F8311E9C712500DB2EF0 /* Build configuration list for PBXNativeTarget "login" */;
 			buildPhases = (
+				93AF4242F10DB1F15BAF1617 /* [CP] Check Pods Manifest.lock */,
 				1121F8161E9C712500DB2EF0 /* Sources */,
 				1121F8171E9C712500DB2EF0 /* Frameworks */,
 				1121F8181E9C712500DB2EF0 /* Resources */,
+				90DA059B43E36DE8203AFA49 /* [CP] Embed Pods Frameworks */,
+				6683515943F396C318C791DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6683515943F396C318C791DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-login/Pods-login-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90DA059B43E36DE8203AFA49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-login/Pods-login-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93AF4242F10DB1F15BAF1617 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1121F8161E9C712500DB2EF0 /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		1121F8321E9C712500DB2EF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16464D7679C6D915F569148F /* Pods-login.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = login/Info.plist;
@@ -287,6 +363,7 @@
 		};
 		1121F8331E9C712500DB2EF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E89A19A9C2FCB327DECBEC1 /* Pods-login.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = login/Info.plist;
