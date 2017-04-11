@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //注册shareSDK第三方平台登录
-    NSString *shareSDKAppkey = @"1026805b2beb4";
+    NSString *shareSDKAppkey = @"";//项目中需要如实填写
     [ShareSDK registerApp:shareSDKAppkey activePlatforms:@[@(SSDKPlatformTypeQQ),@(SSDKPlatformTypeWechat)] onImport:^(SSDKPlatformType platformType) {
         switch (platformType) {
             case SSDKPlatformTypeQQ:
